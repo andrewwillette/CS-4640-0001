@@ -35,7 +35,7 @@ int main (int argc, char *argv[])
   	for(j=0;j<bin_len;++j)
   	{
   		unsigned char c = (unsigned char) (rand()%256) ; 
-
+      /* This part added to show the binary number generated randomly */
       char a = c;
       int k;
       for (k = 0; k < 8; k++) 
@@ -43,7 +43,7 @@ int main (int argc, char *argv[])
         printf("%d", !!((a << k) & 0x80));
       }
       printf(" ");
-
+      /* ************************************************************ */
   		fwrite(&c, sizeof c, 1, fout) ; 
   	}
     printf("\n");
